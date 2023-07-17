@@ -48,11 +48,13 @@ func ConvertTabToJob(tab AsyncJobTab, f func(ctx context.Context, job *Job) erro
 
 func ConvertJobToTab(job Job) AsyncJobTab {
 	return AsyncJobTab{
-		Id:        job.Id,
-		Params:    job.JobParams,
-		JobType:   job.JobType,
-		JobStatus: job.Status,
-		StartTime: job.StartTime,
+		Id:         job.Id,
+		Params:     job.JobParams,
+		JobType:    job.JobType,
+		JobStatus:  job.Status,
+		StartTime:  job.StartTime,
+		CreateTime: uint32(time.Now().Unix()),
+		UpdateTime: uint32(time.Now().Unix()),
 	}
 }
 
