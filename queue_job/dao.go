@@ -30,7 +30,7 @@ func (dao AsyncJobDao) tabName() string {
 }
 
 func (dao AsyncJobDao) AddJob(tab AsyncJobTab) (int64, error) {
-	query := "INSERT INTO async_job_tab (params, job_type, job_status, start_time, create_time, update_time) VALUES (?, ?, ?, ?, ?, ?)"
+	query := fmt.Sprintf("INSERT INTO %s (params, job_type, job_status, start_time, create_time, update_time) VALUES (?, ?, ?, ?, ?, ?)", dao.tabName())
 	result, err := dao.session.Exec(query, tab.Params, tab.JobType, tab.JobStatus, tab.StartTime, tab.CreateTime, tab.UpdateTime)
 	if err != nil {
 		return 0, err
@@ -104,7 +104,7 @@ func (dao AsyncJobDao) GetMaxId() (uint64, error) {
 	defer rows.Close()
 
 	if rows.Next() {
-		err := rows.Scan(&res)
+		err = rows.Scan(&res)
 		if err != nil {
 			return 0, err
 		}

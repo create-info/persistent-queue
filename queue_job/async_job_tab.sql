@@ -1,14 +1,4 @@
 -- create async_job_tab
-
-const (
-	JobStatusInit     JobStatus = 0
-	JobStatusSuccess  JobStatus = 1
-	JobStatusFailed   JobStatus = 2
-	JobStatusContinue JobStatus = 3
-	JobStatusRetry    JobStatus = 4
-)
-
-
 CREATE TABLE `async_job_tab` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
  `params` varchar(4096) COLLATE utf8mb4_unicode_ci DEFAULT '' NOT NULL,

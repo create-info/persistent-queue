@@ -47,9 +47,9 @@ func NewShedLock(config Config, logger queue.Logger) (*Lock, error) {
 	if config.DB == nil {
 		return nil, sessionError
 	}
-	//if err := config.DbSession.Ping(); err != nil {
-	//	return nil, sessionError
-	//}
+	if err := config.DB.Ping(); err != nil {
+		return nil, sessionError
+	}
 	if config.ServiceName == "" {
 		return nil, serviceNameError
 	}
