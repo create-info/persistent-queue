@@ -135,6 +135,6 @@ go get github.com/create-info/persistent-queue@latest
 			}
 			config.Db = gorm
 		}
-		shark_async_job.Init(jobConfigList, logger.QueueLog{})
+		persistent_queue.Init(jobConfigList, logger.QueueLog{})
 	}
 ```

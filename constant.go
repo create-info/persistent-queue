@@ -1,4 +1,4 @@
-package shark_async_job
+package persistent_queue
 
 const (
 	fastLoadingRate           = 5

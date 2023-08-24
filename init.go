@@ -1,4 +1,4 @@
-package shark_async_job
+package persistent_queue
 
 import (
 	"github.com/create-info/persistent-queue/queue"

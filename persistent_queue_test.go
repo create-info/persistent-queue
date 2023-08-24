@@ -1,4 +1,4 @@
-package shark_async_job
+package persistent_queue
 
 import (
 	"context"
@@ -50,7 +50,7 @@ func (g *GormSession) Close() error {
 */
 
 func InitXorm() {
-	engine, err := xorm.NewEngine("mysql", "root:123456@tcp(127.0.0.1:3306)/shopeepay_rr_replayer_sg_db?charset=utf8")
+	engine, err := xorm.NewEngine("mysql", "root:123456@tcp(127.0.0.1:3306)/test_db?charset=utf8")
 	if err != nil {
 		panic(err)
 	}
@@ -61,7 +61,7 @@ func InitXorm() {
 }
 
 func InitGorm() {
-	dsn := "root:123456@tcp(127.0.0.1:3306)/shopeepay_rr_replayer_sg_db"
+	dsn := "root:123456@tcp(127.0.0.1:3306)/test_db"
 	var err error
 	gormDB, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
