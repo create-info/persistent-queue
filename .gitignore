@@ -28,8 +28,5 @@ vendor
 
 log
 *.log*
-
-shark-compare-export
-
 .vscode/
 .vendor/

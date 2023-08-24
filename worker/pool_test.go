@@ -3,7 +3,6 @@ package worker
 import (
 	"context"
 	"fmt"
-	"git.garena.com/shopee/pl/shopeepay-common/log"
 	"git.garena.com/xiaomin.xu/shark-async-job/job_constant"
 	"git.garena.com/xiaomin.xu/shark-async-job/queue"
 	"git.garena.com/xiaomin.xu/shark-async-job/queue_job"
@@ -44,19 +43,19 @@ func (t TestLog) GetNewContext(serviceName string) context.Context {
 }
 
 func (t TestLog) Info(ctx context.Context, info string) {
-	log.Info(ctx, info)
+	fmt.Printf(info)
 }
 
 func (t TestLog) Warn(ctx context.Context, warning string) {
-	log.Warn(ctx, warning)
+	fmt.Printf(warning)
 }
 
 func (t TestLog) Error(ctx context.Context, error string) {
-	log.Errorf(ctx, error)
+	fmt.Printf(error)
 }
 
 func (t TestLog) Debug(ctx context.Context, info string) {
-	log.Debug(ctx, info)
+	fmt.Printf(info)
 }
 
 func f(ctx context.Context, job *queue_job.Job) error {
