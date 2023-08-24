@@ -117,14 +117,14 @@ go get github.com/create-info/persistent-queue@latest
             WorkerPoolCapacity: 100,
             WorkerExpirySecond: 30,
             FirstPullDay:       7,
-            HandleJobFunc:      TriggerCompareJobHandler,//异步任务的handler
+            HandleJobFunc:      SendPaySuccessNotiJobHandler,//异步任务的handler
         }
     )
 
 	func AsyncJobInit() {
 		jobConfigList := make([]queue_job.Config, 0)
 		jobConfigList = append(jobConfigList,
-			TriggerCompareJobConfig, //将这个异步任务加入配置列表
+			SendPaySuccessNotiJobConfig, //将这个异步任务加入配置列表
 		)
 	
 		for i := range jobConfigList {
