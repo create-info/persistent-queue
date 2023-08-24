@@ -1,7 +1,7 @@
 package queue
 
 import (
-	job2 "git.garena.com/xiaomin.xu/shark-async-job/queue_job"
+	job2 "github.com/create-info/persistent-queue/queue_job"
 	"testing"
 )
 

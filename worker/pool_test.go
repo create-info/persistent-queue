@@ -3,9 +3,9 @@ package worker
 import (
 	"context"
 	"fmt"
-	"git.garena.com/xiaomin.xu/shark-async-job/job_constant"
-	"git.garena.com/xiaomin.xu/shark-async-job/queue"
-	"git.garena.com/xiaomin.xu/shark-async-job/queue_job"
+	"github.com/create-info/persistent-queue/job_constant"
+	"github.com/create-info/persistent-queue/queue"
+	"github.com/create-info/persistent-queue/queue_job"
 	"testing"
 	"time"
 )

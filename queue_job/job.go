@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
-	"git.garena.com/xiaomin.xu/shark-async-job/job_constant"
+	"github.com/create-info/persistent-queue/job_constant"
 	"time"
 )
 

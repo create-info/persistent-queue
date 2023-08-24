@@ -1,4 +1,4 @@
-module git.garena.com/xiaomin.xu/shark-async-job
+module github.com/create-info/persistent-queue
 
 go 1.18
 

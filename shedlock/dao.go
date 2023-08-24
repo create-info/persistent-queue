@@ -1,7 +1,7 @@
 package shedlock
 
 import (
-	"git.garena.com/xiaomin.xu/shark-async-job/queue_job"
+	"github.com/create-info/persistent-queue/queue_job"
 )
 
 type ShedlockTab struct {

@@ -1,6 +1,6 @@
 package queue
 
-import "git.garena.com/xiaomin.xu/shark-async-job/queue_job"
+import "github.com/create-info/persistent-queue/queue_job"
 
 type FIFOJobQueue struct {
 	queue []*queue_job.Job

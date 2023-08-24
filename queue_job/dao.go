@@ -2,7 +2,7 @@ package queue_job
 
 import (
 	"fmt"
-	"git.garena.com/xiaomin.xu/shark-async-job/job_constant"
+	"github.com/create-info/persistent-queue/job_constant"
 	"strings"
 	"time"
 )

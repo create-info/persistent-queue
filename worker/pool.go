@@ -2,8 +2,8 @@ package worker
 
 import (
 	"context"
-	"git.garena.com/xiaomin.xu/shark-async-job/queue"
-	"git.garena.com/xiaomin.xu/shark-async-job/queue_job"
+	"github.com/create-info/persistent-queue/queue"
+	"github.com/create-info/persistent-queue/queue_job"
 	"runtime/debug"
 	"sync"
 	"time"

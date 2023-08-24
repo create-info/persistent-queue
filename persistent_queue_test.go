@@ -3,8 +3,8 @@ package shark_async_job
 import (
 	"context"
 	"fmt"
-	"git.garena.com/xiaomin.xu/shark-async-job/job_constant"
-	"git.garena.com/xiaomin.xu/shark-async-job/queue_job"
+	"github.com/create-info/persistent-queue/job_constant"
+	"github.com/create-info/persistent-queue/queue_job"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"strings"
