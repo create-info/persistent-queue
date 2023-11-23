@@ -199,7 +199,8 @@ func (l *Lock) watchShedLock() {
 				// 续期失败
 				l.log.Error(context.TODO(), "shedlock extendShedLock error:%+v, affected:%d", err, affected)
 				close(l.failedExtendChan)
-				return
+				// ！！！这里return了续期失败的stopWatchChan就没法读取，chan卡死，无法重试
+				//return
 			} else {
 				l.log.Info(context.TODO(), "shedlock extendShedLock success")
 			}
